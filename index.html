@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helios Dashboard</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.5/dist/purify.min.js"></script>
+</head>
+<body>
+  <header id="topbar">
+    <button id="resources-toggle" aria-label="Toggle resources" aria-expanded="true" title="Toggle resources sidebar">☰</button>
+  </header>
+  <main>
+    <nav id="tabs">
+      <button data-tab="runs">Live Runs</button>
+      <button data-tab="jobs">Jobs</button>
+      <button data-tab="task" class="active">Tasks</button>
+      <button data-tab="objective">Objectives</button>
+      <button data-tab="issue">Issues</button>
+      <button data-tab="guardrail">Guardrails</button>
+      <button data-tab="note">Notes</button>
+    </nav>
+    <section id="items"></section>
+  </main>
+  <aside id="resources"></aside>
+  <dialog id="token-dialog">
+    <form method="dialog">
+      <p>Paste dashboard bearer token:</p>
+      <input id="token-input" type="password" />
+      <button value="ok">Sign in</button>
+      <p><a href="/api/session/login">Sign in with configured identity provider</a></p>
+    </form>
+  </dialog>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

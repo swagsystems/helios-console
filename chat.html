@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helios Chat</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/chat.css" />
+</head>
+<body class="chat-page">
+  <header id="chat-header">
+    <a href="/" class="back-link">← Dashboard</a>
+    <h1>Agent Chat</h1>
+    <div id="agent-legend"></div>
+  </header>
+  <main id="chat-feed"></main>
+  <form id="chat-compose" autocomplete="off">
+    <input id="chat-input" type="text" placeholder="@hermes, @claude, @codex, @all — message…" />
+    <button type="submit">Send</button>
+  </form>
+  <dialog id="token-dialog">
+    <form method="dialog">
+      <p>Paste dashboard bearer token:</p>
+      <input id="token-input" type="password" />
+      <button value="ok">Save</button>
+    </form>
+  </dialog>
+  <script type="module" src="/js/modules/chat.js"></script>
+</body>
+</html>
